@@ -1,11 +1,11 @@
-import { outDefault } from "../outDefault"
+import { outDefault } from '../outDefault'
 
 export const zoomIn = (element: HTMLElement | null, config: anime.AnimeAnimParams): anime.AnimeAnimParams => {
   return {
     targets: element,
     scale: [0.3, 1],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -16,7 +16,7 @@ export const zoomInDown = (element: HTMLElement | null, config: anime.AnimeAnimP
     scale: [0.3, 1],
     opacity: [0, 1],
     translateY: [300, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -27,7 +27,7 @@ export const zoomInLeft = (element: HTMLElement | null, config: anime.AnimeAnimP
     scale: [0.3, 1],
     opacity: [0, 1],
     translateX: [-300, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -38,7 +38,7 @@ export const zoomInRight = (element: HTMLElement | null, config: anime.AnimeAnim
     scale: [0.3, 1],
     opacity: [0, 1],
     translateX: [300, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -49,7 +49,7 @@ export const zoomInUp = (element: HTMLElement | null, config: anime.AnimeAnimPar
     scale: [0.3, 1],
     opacity: [0, 1],
     translateY: [-300, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -59,7 +59,7 @@ export const zoomOut = (element: HTMLElement | null, config: anime.AnimeAnimPara
     targets: element,
     scale: [1, 0.3],
     opacity: [1, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }
@@ -71,7 +71,7 @@ export const zoomOutDown = (element: HTMLElement | null, config: anime.AnimeAnim
     scale: [1, 0.3],
     opacity: [1, 0],
     translateY: [0, 300],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }
@@ -83,7 +83,7 @@ export const zoomOutLeft = (element: HTMLElement | null, config: anime.AnimeAnim
     scale: [1, 0.3],
     opacity: [1, 0],
     translateX: [0, -300],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }
@@ -95,7 +95,7 @@ export const zoomOutRight = (element: HTMLElement | null, config: anime.AnimeAni
     scale: [1, 0.3],
     opacity: [1, 0],
     translateX: [0, 300],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }
@@ -107,7 +107,7 @@ export const zoomOutUp = (element: HTMLElement | null, config: anime.AnimeAnimPa
     scale: [1, 0.3],
     opacity: [1, 0],
     translateY: [0, -300],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }

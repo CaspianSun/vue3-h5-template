@@ -1,23 +1,27 @@
-import { resolve } from "path"
-import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
-import vueJsx from "@vitejs/plugin-vue-jsx"
-import UnoCSS from "unocss/vite"
-import px2viewport from "postcss-px-to-viewport-8-plugin"
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import UnoCSS from 'unocss/vite'
+import px2viewport from 'postcss-px-to-viewport-8-plugin'
+import { ImageType } from './src/utils/images'
 
 export default defineConfig({
-  base: "/",
+  base: '/',
   plugins: [vue(), vueJsx(), UnoCSS()],
   server: {
     port: 3000,
-    host: "0.0.0.0",
+    host: '0.0.0.0',
     strictPort: true,
   },
   resolve: {
     alias: [
-      { find: "@", replacement: resolve(__dirname, "src/") },
-      { find: "/#", replacement: resolve(__dirname, "types/") },
+      { find: '@', replacement: resolve(__dirname, 'src/') },
+      { find: '/#', replacement: resolve(__dirname, 'types/') },
     ],
+  },
+  define: {
+    ImageType: ImageType,
   },
   css: {
     postcss: {

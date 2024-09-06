@@ -2,49 +2,49 @@
  * 微信JS-SDK说明文档
  * [https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html)
  */
-declare module wx {
+declare namespace wx {
   /**
    * config注入的jsApi
    * 即将废弃: onMenuShareTimeline onMenuShareAppMessage onMenuShareQQ onMenuShareQZone
    */
   type JsApi =
-    | "updateAppMessageShareData"
-    | "updateTimelineShareData"
-    | "onMenuShareTimeline"
-    | "onMenuShareAppMessage"
-    | "onMenuShareQQ"
-    | "onMenuShareWeibo"
-    | "onMenuShareQZone"
-    | "startRecord"
-    | "stopRecord"
-    | "onVoiceRecordEnd"
-    | "playVoice"
-    | "pauseVoice"
-    | "stopVoice"
-    | "onVoicePlayEnd"
-    | "uploadVoice"
-    | "downloadVoice"
-    | "chooseImage"
-    | "previewImage"
-    | "uploadImage"
-    | "downloadImage"
-    | "translateVoice"
-    | "getNetworkType"
-    | "openLocation"
-    | "getLocation"
-    | "hideOptionMenu"
-    | "showOptionMenu"
-    | "hideMenuItems"
-    | "showMenuItems"
-    | "hideAllNonBaseMenuItem"
-    | "showAllNonBaseMenuItem"
-    | "closeWindow"
-    | "scanQRCode"
-    | "chooseWXPay"
-    | "openProductSpecificView"
-    | "addCard"
-    | "chooseCard"
-    | "openCard"
+    | 'updateAppMessageShareData'
+    | 'updateTimelineShareData'
+    | 'onMenuShareTimeline'
+    | 'onMenuShareAppMessage'
+    | 'onMenuShareQQ'
+    | 'onMenuShareWeibo'
+    | 'onMenuShareQZone'
+    | 'startRecord'
+    | 'stopRecord'
+    | 'onVoiceRecordEnd'
+    | 'playVoice'
+    | 'pauseVoice'
+    | 'stopVoice'
+    | 'onVoicePlayEnd'
+    | 'uploadVoice'
+    | 'downloadVoice'
+    | 'chooseImage'
+    | 'previewImage'
+    | 'uploadImage'
+    | 'downloadImage'
+    | 'translateVoice'
+    | 'getNetworkType'
+    | 'openLocation'
+    | 'getLocation'
+    | 'hideOptionMenu'
+    | 'showOptionMenu'
+    | 'hideMenuItems'
+    | 'showMenuItems'
+    | 'hideAllNonBaseMenuItem'
+    | 'showAllNonBaseMenuItem'
+    | 'closeWindow'
+    | 'scanQRCode'
+    | 'chooseWXPay'
+    | 'openProductSpecificView'
+    | 'addCard'
+    | 'chooseCard'
+    | 'openCard'
 
   /**
    * 基本类
@@ -57,13 +57,13 @@ declare module wx {
    * - 查看公众号（未添加）: "menuItem:addContact"
    */
   type BaseMenu =
-    | "menuItem:exposeArticle"
-    | "menuItem:setFont"
-    | "menuItem:dayMode"
-    | "menuItem:nightMode"
-    | "menuItem:refresh"
-    | "menuItem:profile"
-    | "menuItem:addContact"
+    | 'menuItem:exposeArticle'
+    | 'menuItem:setFont'
+    | 'menuItem:dayMode'
+    | 'menuItem:nightMode'
+    | 'menuItem:refresh'
+    | 'menuItem:profile'
+    | 'menuItem:addContact'
 
   /**
    * 传播类
@@ -76,13 +76,13 @@ declare module wx {
    * - 分享到 QQ 空间 "menuItem:share:QZone"
    */
   type ShareMenu =
-    | "menuItem:share:appMessage"
-    | "menuItem:share:timeline"
-    | "menuItem:share:qq"
-    | "menuItem:share:weiboApp"
-    | "menuItem:favorite"
-    | "menuItem:share:facebook"
-    | "menuItem:share:QZone"
+    | 'menuItem:share:appMessage'
+    | 'menuItem:share:timeline'
+    | 'menuItem:share:qq'
+    | 'menuItem:share:weiboApp'
+    | 'menuItem:favorite'
+    | 'menuItem:share:facebook'
+    | 'menuItem:share:QZone'
 
   /**
    * 保护类
@@ -97,15 +97,15 @@ declare module wx {
    * - 一些特殊公众号: "menuItem:share:brand"
    */
   type ProtectMenu =
-    | "menuItem:editTag"
-    | "menuItem:delete"
-    | "menuItem:copyUrl"
-    | "menuItem:originPage"
-    | "menuItem:readMode"
-    | "menuItem:openWithQQBrowser"
-    | "menuItem:openWithSafari"
-    | "menuItem:share:email"
-    | "menuItem:share:brand"
+    | 'menuItem:editTag'
+    | 'menuItem:delete'
+    | 'menuItem:copyUrl'
+    | 'menuItem:originPage'
+    | 'menuItem:readMode'
+    | 'menuItem:openWithQQBrowser'
+    | 'menuItem:openWithSafari'
+    | 'menuItem:share:email'
+    | 'menuItem:share:brand'
 
   interface ConfigOptions {
     /**
@@ -219,7 +219,7 @@ declare module wx {
     /**
      * 分享类型,music、video或link，不填默认为link
      */
-    type?: "music" | "video" | "link"
+    type?: 'music' | 'video' | 'link'
     /**
      * 如果type是music或video，则要提供数据链接，默认为空
      */
@@ -243,11 +243,11 @@ declare module wx {
     /**
      * 可以指定是原图还是压缩图，默认二者都有
      */
-    sizeType: ("original" | "compressed")[]
+    sizeType: ('original' | 'compressed')[]
     /**
      * 可以指定来源是相册还是相机，默认二者都有
      */
-    sourceType: ("album" | "camera")[]
+    sourceType: ('album' | 'camera')[]
   }
 
   /**
@@ -359,7 +359,7 @@ declare module wx {
   /**
    * 设备网络状态
    */
-  type NetworkType = "2g" | "3g" | "4g" | "wifi"
+  type NetworkType = '2g' | '3g' | '4g' | 'wifi'
 
   /**
    * 参数：使用微信内置地图查看位置接口
@@ -394,7 +394,7 @@ declare module wx {
   /**
    * 地理位置坐标类型
    */
-  type LocationType = "wgs84" | "gcj02"
+  type LocationType = 'wgs84' | 'gcj02'
 
   /**
    * 参数：获取地理位置接口
@@ -438,10 +438,10 @@ declare module wx {
    * 周边ibeacon设备精度
    */
   enum BeaconsProximity {
-    CLProximityUnknown = "0",
-    CLProximityImmediate = "1",
-    CLProximityNear = "2",
-    CLProximityFar = "3",
+    CLProximityUnknown = '0',
+    CLProximityImmediate = '1',
+    CLProximityNear = '2',
+    CLProximityFar = '3',
   }
 
   /**
@@ -503,7 +503,7 @@ declare module wx {
     /**
      * 可以指定扫二维码还是一维码，默认二者都有
      */
-    scanType?: ("qrCode" | "barCode")[]
+    scanType?: ('qrCode' | 'barCode')[]
   }
 
   /**
@@ -558,7 +558,7 @@ declare module wx {
     /**
      * 签名方式，目前仅支持SHA1
      */
-    signType?: "SHA1"
+    signType?: 'SHA1'
     /**
      * 签名。详见[附录4](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html#%E9%99%84%E5%BD%954-%E5%8D%A1%E5%88%B8%E6%89%A9%E5%B1%95%E5%AD%97%E6%AE%B5%E5%8F%8A%E7%AD%BE%E5%90%8D%E7%94%9F%E6%88%90%E7%AE%97%E6%B3%95)。
      */
@@ -1093,7 +1093,7 @@ declare module wx {
        * 录音获得的本地资源ID
        */
       localId: string
-    }>,
+    }>
   ): void
 
   /**
@@ -1117,7 +1117,7 @@ declare module wx {
          */
         localId: string
       }
-    >,
+    >
   ): void
 
   /**
@@ -1170,7 +1170,7 @@ declare module wx {
        * 返回音频的本地ID
        */
       localId: string
-    }>,
+    }>
   ): void
 
   /**
@@ -1242,7 +1242,7 @@ declare module wx {
   function getNetworkType(
     options: CommonApiOptions<{
       networkType: NetworkType
-    }>,
+    }>
   ): void
   /* --------------------------------- 设备信息 End --------------------------------- */
 
@@ -1535,5 +1535,5 @@ interface Window {
    * 小程序web-view中才有该字段
    * [小程序文档](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html#%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3-4)
    */
-  __wxjs_environment?: "miniprogram"
+  __wxjs_environment?: 'miniprogram'
 }

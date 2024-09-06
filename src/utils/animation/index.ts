@@ -1,11 +1,11 @@
-import anime from "animejs"
-import effect from "./effect"
-export { hiddenEffect } from "./effect"
+import anime from 'animejs'
+import effect from './effect'
+export { hiddenEffect } from './effect'
 export const handleAnimation = (
   element: HTMLElement | null,
   config: (anime.AnimeParams & {
     value: string
-  })[],
+  })[]
 ) => {
   anime.remove(element)
   if (config.length == 1) {
@@ -28,7 +28,7 @@ export function createAndPauseAnimation(
   element: HTMLElement | null,
   config: (anime.AnimeParams & {
     value: string
-  })[],
+  })[]
 ) {
   anime.remove(element)
   if (config.length == 1) {

@@ -1,11 +1,11 @@
-import { outDefault } from "../outDefault"
+import { outDefault } from '../outDefault'
 
 export const flipInX = (element: HTMLElement | null, config: anime.AnimeAnimParams): anime.AnimeAnimParams => {
   return {
     targets: element,
     rotateX: [-90, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -15,7 +15,7 @@ export const flipInY = (element: HTMLElement | null, config: anime.AnimeAnimPara
     targets: element,
     rotateY: [90, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -25,7 +25,7 @@ export const flipOutX = (element: HTMLElement | null, config: anime.AnimeAnimPar
     targets: element,
     rotateX: [0, 90],
     opacity: [1, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }
@@ -36,7 +36,7 @@ export const flipOutY = (element: HTMLElement | null, config: anime.AnimeAnimPar
     targets: element,
     rotateY: [0, 90],
     opacity: [1, 0],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...outDefault,
     ...config,
   }

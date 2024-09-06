@@ -1,10 +1,10 @@
-import { outDefault } from "../outDefault"
+import { outDefault } from '../outDefault'
 
 export const fadeIn = (element: HTMLElement | null, config: anime.AnimeAnimParams): anime.AnimeAnimParams => {
   return {
     targets: element,
     opacity: [0, 1],
-    easing: "easeInOutQuad",
+    easing: 'easeInOutQuad',
     ...config,
   }
 }
@@ -14,7 +14,7 @@ export const fadeInUp = (element: HTMLElement | null, config: anime.AnimeAnimPar
     targets: element,
     translateY: [100, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -24,7 +24,7 @@ export const fadeInDown = (element: HTMLElement | null, config: anime.AnimeAnimP
     targets: element,
     translateY: [-100, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -34,7 +34,7 @@ export const fadeInLeft = (element: HTMLElement | null, config: anime.AnimeAnimP
     targets: element,
     translateX: [-100, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -44,7 +44,7 @@ export const fadeInRight = (element: HTMLElement | null, config: anime.AnimeAnim
     targets: element,
     translateX: [100, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -54,7 +54,7 @@ export const fadeInUpBig = (element: HTMLElement | null, config: anime.AnimeAnim
     targets: element,
     translateY: [500, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -64,7 +64,7 @@ export const fadeInDownBig = (element: HTMLElement | null, config: anime.AnimeAn
     targets: element,
     translateY: [-500, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -74,7 +74,7 @@ export const fadeInLeftBig = (element: HTMLElement | null, config: anime.AnimeAn
     targets: element,
     translateX: [-500, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -84,7 +84,7 @@ export const fadeInRightBig = (element: HTMLElement | null, config: anime.AnimeA
     targets: element,
     translateX: [500, 0],
     opacity: [0, 1],
-    easing: "easeOutQuad",
+    easing: 'easeOutQuad',
     ...config,
   }
 }
@@ -93,7 +93,7 @@ export const fadeOut = (element: HTMLElement | null, config: anime.AnimeAnimPara
   return {
     targets: element,
     opacity: [1, 0],
-    easing: "easeInOutQuad",
+    easing: 'easeInOutQuad',
     ...outDefault,
     ...config,
   }
@@ -104,7 +104,7 @@ export const fadeOutUp = (element: HTMLElement | null, config: anime.AnimeAnimPa
     targets: element,
     translateY: [0, -100],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -115,7 +115,7 @@ export const fadeOutDown = (element: HTMLElement | null, config: anime.AnimeAnim
     targets: element,
     translateY: [0, 100],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -127,7 +127,7 @@ export const fadeOutLeft = (element: HTMLElement | null, config: anime.AnimeAnim
 
     translateX: [0, -100],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -139,7 +139,7 @@ export const fadeOutRight = (element: HTMLElement | null, config: anime.AnimeAni
 
     translateX: [0, 100],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -151,7 +151,7 @@ export const fadeOutUpBig = (element: HTMLElement | null, config: anime.AnimeAni
 
     translateY: [0, -500],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -163,7 +163,7 @@ export const fadeOutDownBig = (element: HTMLElement | null, config: anime.AnimeA
 
     translateY: [0, 500],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -175,7 +175,7 @@ export const fadeOutLeftBig = (element: HTMLElement | null, config: anime.AnimeA
 
     translateX: [0, -500],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }
@@ -186,7 +186,7 @@ export const fadeOutRightBig = (element: HTMLElement | null, config: anime.Anime
     targets: element,
     translateX: [0, 500],
     opacity: [1, 0],
-    easing: "easeInQuad",
+    easing: 'easeInQuad',
     ...outDefault,
     ...config,
   }

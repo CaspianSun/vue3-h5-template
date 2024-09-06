@@ -2,24 +2,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-    <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-    <script>
-      var vConsole = new window.VConsole()
-    </script> -->
-    <script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-    <script>
-      ;(function () {
-        window.openid = "{{ openid }}"
-        window.wxAppId = "{{ appId }}"
-        window.wxTimestamp = "{{ timestamp }}"
-        window.wxNonceStr = "{{ nonceStr }}"
-        window.wxSignature = "{{ signature }}"
-      })()
-    </script>
   </head>
 
   <body>
     <div id="app"></div>
     <script src="/src/main.ts" type="module"></script>
+
+    <script src="//res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+      ;(function () {
+        window.openid = '{{ openid }}'
+        window.wxAppId = '{{ appId }}'
+        window.wxTimestamp = '{{ timestamp }}'
+        window.wxNonceStr = '{{ nonceStr }}'
+        window.wxSignature = '{{ signature }}'
+      })()
+    </script>
+    <script>
+      const script = document.createElement('script')
+      script.src = 'https://unpkg.com/vconsole@latest/dist/vconsole.min.js'
+      script.onload = () => {
+        new window.VConsole()
+      }
+      if ('%MODE%' == 'test') document.head.appendChild(script)
+    </script>
   </body>
 </html>
